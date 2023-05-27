@@ -214,9 +214,31 @@ body.pastTitleScreen .content .world {
     padding: 10vh 10vw;
 }
 
+.content .title {
+    background: url(../images/fon.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: end;
+}
+
+.content .title h1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 62px;
+    line-height: 76px;
+    color: #FFFFFF;
+    margin-top: 212px;
+}
+
 .content .latestProjects{
     display: flex;
     flex-direction: column;
+    scroll-snap-align: start;
 }
 .content .latestProjects .textContent{
     width: 676px;
