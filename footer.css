@@ -1,0 +1,86 @@
+body {
+  font-family: "Raleway";
+  background: #252525;
+}
+
+#links {
+  text-align: center;
+  margin-top: 45px;
+  margin-bottom: 49px;
+  margin-left: 168px;
+  margin-right: 168px;
+  
+  padding-top: 43px;
+  padding-bottom: 43px;
+  border-top: 1px solid #373737;
+  border-bottom: 1px solid #373737;
+  
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px
+}
+
+#first-link {
+  color: #FFFFFF;
+  text-decoration: none;
+  margin-right: 65px;
+}
+
+#last-link {
+  color: #FFFFFF;
+  text-decoration: none;
+  margin-left: 65px;
+}
+
+#common-link {
+  color: #FFFFFF;
+  text-decoration: none;
+  margin-right: 65px;
+  margin-left: 65px;
+}
+
+#contacts {
+  margin-left: 163px;
+  margin-bottom: 45px;
+  padding-bottom: 73px;
+  border-bottom: 1px solid #373737;
+}
+
+#contact-with-us {
+  color: #FFFFFF;
+  font-family: 'Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+#number {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #A3A3A3;
+}
+
+#for-orders {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #B89535;
+}
+
+#for-other {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #B89535;
+}
+
+
