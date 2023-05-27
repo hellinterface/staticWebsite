@@ -213,90 +213,55 @@ body.pastTitleScreen .content .world {
     width: 100vw;
 }
 
-.content .title {
-    background: url(../images/fon.png);
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    scroll-snap-align: end;
-}
-
-.content .title h1 {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 62px;
-    line-height: 76px;
-    color: #FFFFFF;
-    margin-top: 212px;
-}
-
-.content .world {
+.content .latestProjects{
     display: flex;
     flex-direction: column;
-    padding: 64px;
-    scroll-snap-align: start;
 }
-
-.content .world .textContent {
+.content .latestProjects .textContent{
+    width: 676px;
+    height: 246px;
     display: flex;
     flex-direction: column;
-    gap: 22px;
-    margin: 44px 64px;
+    justify-content: space-between;
 }
 
-.content .world h2 {
-    margin-bottom: 13px;
-}
-
-.content .world p {
-    width: 533px;
-}
-
-.content .world .projectItems {
+.content .latestProjects .projectItems{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 16px;
-    margin-top: 24px;
+    margin-top: 50px;
 }
-
-.content .world .projectItems .projectItem {
+.content .latestProjects .projectItems .projectItem{
     width: 360px;
     height: auto;
     display: flex;
     flex-direction: column;
+    margin-top: 16px;
 }
-
-.content .world .projectItems .projectItem h3 {
+.content .latestProjects .projectItems .projectItem h3{
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 24px;
     color: #484848;
-    margin-top: 36px;
+    margin-top: 30px;
     margin-left: 28px;
 }
-
-.content .world .projectItems .projectItem p {
+.content .latestProjects .projectItems .projectItem p{
     width: 304px;
     margin-top: 15px;
     margin-left: 28px;
+    font-size: 16px;
 }
-
-.content .world .learnMoreButtonContainer {
+.content .latestProjects .learnMoreButtonContainer{
     height: 60px;
     display: flex;
     justify-content: right;
-    margin-top: 166px;
-    margin-bottom: 20px;
+    margin-top: 95px;
 }
-
-.content .world .learnMoreButton {
+.content .latestProjects .learnMoreButton{
     height: 60px;
     width: fit-content;
     display: flex;
@@ -304,18 +269,122 @@ body.pastTitleScreen .content .world {
     align-items: center;
     gap: 22px;
 }
-
-.content .world .learnMoreButton .learnMoreButtonIcon {
+.content .latestProjects .learnMoreButton .learnMoreButtonIcon{
     width: 60px;
     height: 60px;
     border: 1px solid #C4C4C4;
     border-radius: 50%;
-    background: url(../images/svg/arrowDown.svg) 21px no-repeat;
-    background-position: center center;
+    background: url(img/svg/arrowDown.svg) 21px center no-repeat;
 }
-
-.content .world .learnMoreButton p {
+.content .latestProjects .learnMoreButton p{
     width: 88px;
+}
+.content .services{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #6A6868;
+    padding-bottom: 425px;
+}
+.content .services h2, .content .services p{
+    color: #FFFFFF;
+}
+.content .services .textContent{
+    width: 56%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.content .services .textContent .learnMoreButton{
+    width: 262px;
+    height: 75px;
+    border: 1px solid #FFFFFF;
+    margin-top: 22px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-self: end;
+}
+.content .services .textContent .learnMoreButton p{
+    font-size: 16px;
+    width: 130px;
+    text-align: center;
+}
+.content .services .textContent .learnMoreButton .learnMoreButtonIcon{
+    width: 20px;
+    height: 15px;
+    background: url(img/svg/arrowRight.svg) center no-repeat;
+}
+.content .aboutStudio{
+    height: 710px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: url(img/index/fonStudio.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-top: -300px;
+    padding-top: 260px;
+}
+.content .aboutStudio .textContent{
+    width: 46%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.content .aboutStudio .textContent .learnMoreButton{
+    width: 262px;
+    height: 75px;
+    border: 1px solid #7B736F;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-self: end;
+}
+.content .aboutStudio .textContent .learnMoreButton p{
+    font-size: 16px;
+    width: 130px;
+    text-align: center;
+}
+.content .aboutStudio .textContent .learnMoreButton .learnMoreButtonIcon{
+    width: 22px;
+    height: 20px;
+    background: url(img/svg/arrowRightBrown.svg) center no-repeat;
+}
+.content .We{
+    background: #E1E1E1;
+}
+.content .We .ContentItem{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    justify-content: space-between;
+    margin-top: 57px;
+}
+.content .We .ContentItem h3{
+    font-size: 40px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    letter-spacing: 0.005em;
+    font-style: normal;
+    color: #4A4A49;
+}
+.content .We .ContentItem .right{
+    align-self: end;
+}
+.content .We .ContentItem .textContent{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+}
+.content .We .ContentItem .textContent .text{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 22px;
 }
 
 footer {
