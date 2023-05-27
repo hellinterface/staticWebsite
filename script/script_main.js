@@ -1,20 +1,24 @@
 document.addEventListener("DOMContentLoaded", function(){
     // функции "открыть" и "закрыть" меню
-    document.getElementById('openMenu').onclick = function(){
-        box.style.height="100vh";
-    }
-    document.getElementById('closeMenu').onclick = function(){
-        box.style.height="0vh";
-    }
+    menuToggle.addEventListener('click', () => {
+        document.body.classList.toggle('menuOpened');
+    });
 
-    window.addEventListener('scroll', () => {
-        console.log(window.scrollY, window.visualViewport.height);
-        if (window.scrollY > window.visualViewport.height) {
-            document.body.classList.add('pastTitleScreen');
+    var lastKnownScrollPosition = 0;
+    
+    const mainContent = document.querySelector('.content');
+
+    mainContent.addEventListener('scroll', (event) => {
+        if (mainContent.scrollTop >= window.visualViewport.height) {
+            setTimeout(() => {
+                document.body.classList.add('pastTitleScreen');
+            }, 200);
         }
         else {
             document.body.classList.remove('pastTitleScreen');
         }
+        lastKnownScrollPosition = mainContent.scrollTop;
+        console.log(mainContent.scrollTop, window.visualViewport.height);
     });
 
     point1.onmouseover = function(){
