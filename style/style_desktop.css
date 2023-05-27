@@ -211,6 +211,7 @@ body.pastTitleScreen .content .world {
 
 .content > div {
     width: 100vw;
+    padding: 10vh 10vw;
 }
 
 .content .latestProjects{
@@ -274,7 +275,7 @@ body.pastTitleScreen .content .world {
     height: 60px;
     border: 1px solid #C4C4C4;
     border-radius: 50%;
-    background: url(img/svg/arrowDown.svg) 21px center no-repeat;
+    background: url(../images/svg/arrowDown.svg) 21px center no-repeat;
 }
 .content .latestProjects .learnMoreButton p{
     width: 88px;
@@ -313,14 +314,14 @@ body.pastTitleScreen .content .world {
 .content .services .textContent .learnMoreButton .learnMoreButtonIcon{
     width: 20px;
     height: 15px;
-    background: url(img/svg/arrowRight.svg) center no-repeat;
+    background: url(../images/svg/arrowRight.svg) center no-repeat;
 }
 .content .aboutStudio{
     height: 710px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: url(img/index/fonStudio.png);
+    background: url(../images/index/fonStudio.png);
     background-repeat: no-repeat;
     background-size: 100%;
     margin-top: -300px;
@@ -349,7 +350,7 @@ body.pastTitleScreen .content .world {
 .content .aboutStudio .textContent .learnMoreButton .learnMoreButtonIcon{
     width: 22px;
     height: 20px;
-    background: url(img/svg/arrowRightBrown.svg) center no-repeat;
+    background: url(../images/svg/arrowRightBrown.svg) center no-repeat;
 }
 .content .We{
     background: #E1E1E1;
