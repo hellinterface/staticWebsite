@@ -8,19 +8,6 @@ document.addEventListener("DOMContentLoaded", function(){
     
     const mainContent = document.querySelector('.content');
 
-    mainContent.addEventListener('scroll', (event) => {
-        if (mainContent.scrollTop >= window.visualViewport.height) {
-            setTimeout(() => {
-                document.body.classList.add('pastTitleScreen');
-            }, 200);
-        }
-        else {
-            document.body.classList.remove('pastTitleScreen');
-        }
-        lastKnownScrollPosition = mainContent.scrollTop;
-        console.log(mainContent.scrollTop, window.visualViewport.height);
-    });
-
     point1.onmouseover = function(){
         point1.style.color = "#B89535";
         Img1.style.opacity = 1;

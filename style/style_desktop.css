@@ -46,11 +46,11 @@ body {
     min-height: 100vh;
 }
 
-body.menuOpened #box {
+body.menuOpened #mainMenu {
     height: 100vh !important;
 }
 
-#box {
+#mainMenu {
     width: 100vw;
     height: 0vh;
     box-sizing: border-box;
@@ -62,10 +62,10 @@ body.menuOpened #box {
     left: 0px;
     overflow: hidden;
     transition: ease 1s;
-    z-index: 1;
+    z-index: 5;
 }
 
-#box .menu {
+#mainMenu #mainMenuContent {
     display: flex;
     justify-content: center;
     align-items: top;
@@ -73,25 +73,20 @@ body.menuOpened #box {
     margin-top: 160px;
 }
 
-#box .menu nav {
+#mainMenu #mainMenuContent nav {
     margin-top: 64px;
     display: flex;
     flex-direction: column;
     z-index: 1;
 }
 
-#box .menu nav li {
+#mainMenu #mainMenuContent nav li {
     margin-bottom: 30px;
     display: flex;
     align-items: center;
 }
 
-#box .menu nav hr {
-    display: none;
-    transition: all 1s linear;
-}
-
-#box .menu nav a {
+#mainMenu #mainMenuContent nav a {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
@@ -100,13 +95,13 @@ body.menuOpened #box {
     color: #FFFFFF;
 }
 
-#box .menu .boxImg {
+#mainMenu #mainMenuContent #mainMenuImageContainer {
     width: 580px;
     height: 580px;
     position: relative;
 }
 
-#box .menu .boxImg img {
+#mainMenu #mainMenuContent #mainMenuImageContainer img {
     opacity: 0;
     transition: ease 0.4s;
     position: absolute;
@@ -124,7 +119,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 5;
+    z-index: 10;
 }
 
 .headerMenu {
@@ -141,8 +136,13 @@ header {
 
 body.pastTitleScreen header {}
 
-body.pastTitleScreen .headerMenu {
+body.pastTitleScreen .headerMenu,
+body.darkHeader .headerMenu {
     filter: invert(1);
+}
+
+body.menuOpened .headerMenu {
+    filter: invert(0) !important;
 }
 
 .headerMenu #menuToggle {
@@ -154,7 +154,7 @@ body.pastTitleScreen .headerMenu {
     background-size: 24px;
 }
 
-body.menuOpened .headerMenu #menuToggle {
+body#mainMenuContentOpened .headerMenu #menuToggle {
     background-image: url(../images/svg/close.svg);
     background-size: 20px;
 }
@@ -164,23 +164,14 @@ body.menuOpened .headerMenu #menuToggle {
     height: 72px;
 }
 
-.content {
+main {
     width: 100vw;
-    height: 100vh;
-    overflow: auto;
+    height: auto;
     background: #FFFFFF;
-    scroll-snap-type: y mandatory;
     z-index: 3;
 }
 
-body.pastTitleScreen .content {
-    scroll-snap-type: none !important;
-}
-body.pastTitleScreen .content .world {
-    scroll-snap-align: none !important;
-}
-
-.content h2 {
+main h2 {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
@@ -190,7 +181,7 @@ body.pastTitleScreen .content .world {
     color: #4A4A49;
 }
 
-.content h2 span {
+main h2 span {
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 300;
@@ -200,7 +191,7 @@ body.pastTitleScreen .content .world {
     color: #B89535;
 }
 
-.content p {
+main p {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 300;
@@ -209,12 +200,12 @@ body.pastTitleScreen .content .world {
     color: #4A4A49;
 }
 
-.content > div {
+main > div {
     width: 100vw;
     padding: 10vh 10vw;
 }
 
-.content .title {
+main .title {
     background: url(../images/fon.png);
     background-position: center;
     background-size: cover;
@@ -222,10 +213,9 @@ body.pastTitleScreen .content .world {
     display: flex;
     justify-content: center;
     align-items: center;
-    scroll-snap-align: end;
 }
 
-.content .title h1 {
+main .title h1 {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
@@ -235,12 +225,11 @@ body.pastTitleScreen .content .world {
     margin-top: 212px;
 }
 
-.content .latestProjects{
+main .latestProjects{
     display: flex;
     flex-direction: column;
-    scroll-snap-align: start;
 }
-.content .latestProjects .textContent{
+main .latestProjects .textContent{
     width: 676px;
     height: 246px;
     display: flex;
@@ -248,21 +237,21 @@ body.pastTitleScreen .content .world {
     justify-content: space-between;
 }
 
-.content .latestProjects .projectItems{
+main .latestProjects .projectItems{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 16px;
     margin-top: 50px;
 }
-.content .latestProjects .projectItems .projectItem{
+main .latestProjects .projectItems .projectItem{
     width: 360px;
     height: auto;
     display: flex;
     flex-direction: column;
     margin-top: 16px;
 }
-.content .latestProjects .projectItems .projectItem h3{
+main .latestProjects .projectItems .projectItem h3{
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
@@ -272,19 +261,19 @@ body.pastTitleScreen .content .world {
     margin-top: 30px;
     margin-left: 28px;
 }
-.content .latestProjects .projectItems .projectItem p{
+main .latestProjects .projectItems .projectItem p{
     width: 304px;
     margin-top: 15px;
     margin-left: 28px;
     font-size: 16px;
 }
-.content .latestProjects .learnMoreButtonContainer{
+main .latestProjects .learnMoreButtonContainer{
     height: 60px;
     display: flex;
     justify-content: right;
     margin-top: 95px;
 }
-.content .latestProjects .learnMoreButton{
+main .latestProjects .learnMoreButton{
     height: 60px;
     width: fit-content;
     display: flex;
@@ -292,33 +281,33 @@ body.pastTitleScreen .content .world {
     align-items: center;
     gap: 22px;
 }
-.content .latestProjects .learnMoreButton .learnMoreButtonIcon{
+main .latestProjects .learnMoreButton .learnMoreButtonIcon{
     width: 60px;
     height: 60px;
     border: 1px solid #C4C4C4;
     border-radius: 50%;
     background: url(../images/svg/arrowDown.svg) 21px center no-repeat;
 }
-.content .latestProjects .learnMoreButton p{
+main .latestProjects .learnMoreButton p{
     width: 88px;
 }
-.content .services{
+main .services{
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: #6A6868;
     padding-bottom: 425px;
 }
-.content .services h2, .content .services p{
+main .services h2, main .services p{
     color: #FFFFFF;
 }
-.content .services .textContent{
+main .services .textContent{
     width: 56%;
     display: flex;
     flex-direction: column;
     gap: 32px;
 }
-.content .services .textContent .learnMoreButton{
+main .services .textContent .learnMoreButton{
     width: 262px;
     height: 75px;
     border: 1px solid #FFFFFF;
@@ -328,17 +317,17 @@ body.pastTitleScreen .content .world {
     align-items: center;
     align-self: end;
 }
-.content .services .textContent .learnMoreButton p{
+main .services .textContent .learnMoreButton p{
     font-size: 16px;
     width: 130px;
     text-align: center;
 }
-.content .services .textContent .learnMoreButton .learnMoreButtonIcon{
+main .services .textContent .learnMoreButton .learnMoreButtonIcon{
     width: 20px;
     height: 15px;
     background: url(../images/svg/arrowRight.svg) center no-repeat;
 }
-.content .aboutStudio{
+main .aboutStudio{
     height: 710px;
     display: flex;
     justify-content: space-between;
@@ -349,13 +338,13 @@ body.pastTitleScreen .content .world {
     margin-top: -300px;
     padding-top: 260px;
 }
-.content .aboutStudio .textContent{
+main .aboutStudio .textContent{
     width: 46%;
     display: flex;
     flex-direction: column;
     gap: 32px;
 }
-.content .aboutStudio .textContent .learnMoreButton{
+main .aboutStudio .textContent .learnMoreButton{
     width: 262px;
     height: 75px;
     border: 1px solid #7B736F;
@@ -364,20 +353,20 @@ body.pastTitleScreen .content .world {
     align-items: center;
     align-self: end;
 }
-.content .aboutStudio .textContent .learnMoreButton p{
+main .aboutStudio .textContent .learnMoreButton p{
     font-size: 16px;
     width: 130px;
     text-align: center;
 }
-.content .aboutStudio .textContent .learnMoreButton .learnMoreButtonIcon{
+main .aboutStudio .textContent .learnMoreButton .learnMoreButtonIcon{
     width: 22px;
     height: 20px;
     background: url(../images/svg/arrowRightBrown.svg) center no-repeat;
 }
-.content .We{
+main .We{
     background: #E1E1E1;
 }
-.content .We .ContentItem{
+main .We mainItem{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -385,7 +374,7 @@ body.pastTitleScreen .content .world {
     justify-content: space-between;
     margin-top: 57px;
 }
-.content .We .ContentItem h3{
+main .We mainItem h3{
     font-size: 40px;
     font-family: 'Roboto';
     font-weight: 400;
@@ -393,16 +382,16 @@ body.pastTitleScreen .content .world {
     font-style: normal;
     color: #4A4A49;
 }
-.content .We .ContentItem .right{
+main .We mainItem .right{
     align-self: end;
 }
-.content .We .ContentItem .textContent{
+main .We mainItem .textContent{
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;   
 }
-.content .We .ContentItem .textContent .text{
+main .We mainItem .textContent .text{
     width: 60%;
     display: flex;
     flex-direction: column;
@@ -432,6 +421,8 @@ footer .footerContent {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
     border-top: 1px solid #333;
     border-bottom: 1px solid #333;
     font-style: normal;
@@ -519,4 +510,120 @@ footer .footerContent {
 .footerSocial img {
     width: 24px;
     height: 24px;
+}
+
+
+
+
+main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.portfolioContent {
+    padding-top: 160px;
+    max-width: 1600px;
+    width: 100%;
+}
+
+.portfolioContent h1 {
+    font-family: 'Montserrat';
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.portfolioContent .portfolioItemList {
+    margin: 5% 0;
+}
+
+.portfolioContent .portfolioItemList .portfolioItem:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+
+.portfolioContent .portfolioItem {
+    height: 400px;
+    width: 100%;
+    font-family: 'Montserrat';
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    gap: 5%;
+    border-top: 1px solid #7B736F;
+}
+
+.portfolioContent .portfolioItem .portfolioItemImage {
+    background: coral;
+    aspect-ratio: 1;
+    height: 100%;
+    grid-area: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.portfolioContent .portfolioItem .portfolioItemImage img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+
+.portfolioContent .portfolioItem .portfolioItemRightContainer {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+    gap: 16px;
+}
+
+.portfolioContent .portfolioItem .portfolioItemTitle {
+    font-size: 2em;
+}
+
+.portfolioContent .portfolioItem .portfolioItemDescription {
+    font-size: 1.25em;
+    flex-grow: 1;
+}
+
+.portfolioContent .portfolioItem .portfolioItemOpinionContainer {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 80px auto;
+    grid-template-areas: "left right-top" "left right-bottom";
+    gap: 16px;
+}
+
+.portfolioContent .opinionImage {
+    background-color: coral;
+    aspect-ratio: 1;
+    width: 80px;
+    border-radius: 50%;
+    grid-area: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.portfolioContent .opinionImage img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.portfolioContent .opinionName {
+    grid-area: right-top;
+    font-size: 1.4em;
+}
+
+.portfolioContent .opinionText {
+    grid-area: right-bottom;
+    font-size: 1.15em;
+}
+
+.portfolioContent .portfolioItem .portfolioItemDetailsButton {
+    height: 64px;
+    border: 1px solid #7B736F;
 }
