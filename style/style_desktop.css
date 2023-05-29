@@ -627,3 +627,80 @@ main {
     height: 64px;
     border: 1px solid #7B736F;
 }
+
+main .headings{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 184px;
+}
+main .headings h1{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 128%;
+    letter-spacing: 0.005em;
+    color: #4A4A49;
+}
+main .headings h2{
+    font-size: 32px;
+}
+main .headings h3{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: 0.005em;
+    color: #E0D7CE;
+}
+main .map iframe{
+    width: 100%;
+    height: 600px;
+}
+main .contactsContent{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+main .contactsContent .box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 11px;
+}
+main .contactsContent .box .info{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+main .contactsContent .box .info .phone{
+    width: 38px;
+    height: 34px;
+    background: url(../images/svg/phone.svg) center no-repeat;
+}
+main .contactsContent .box .info .post{
+    width: 32px;
+    height: 25px;
+    background: url(../images/svg/post.svg) center no-repeat;
+}
+main .contactsContent .box h1{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 128%;
+    letter-spacing: 0.005em;
+    color: #4A4A49;
+}
+main .contactsContent .box p{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 30px;
+    letter-spacing: 0.005em;
+    color: #D9D9D9;
+}
