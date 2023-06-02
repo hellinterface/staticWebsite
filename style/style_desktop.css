@@ -215,7 +215,6 @@ main > div {
     width: 100vw;
     padding: 10vh 10vw;
 }
-
 main .title {
     background: url(../images/fon.png);
     background-position: center;
@@ -529,61 +528,75 @@ footer .footerContent {
 main {
     display: flex;
     justify-content: center;
-    width: 100%;
     flex-direction: column;
 }
-
-.portfolioContent {
-    padding-top: 160px;
-    max-width: 1600px;
-    width: 100%;
+.portfolioItemList .portfolioItem:nth-child(2n) .portfolioItemOpinionContainer {
+    grid-template-areas: "left-top right" "left-bottom right";
+    grid-template-columns: auto 80px;
+    grid-template-rows: 1fr auto;
 }
-
-.portfolioContent h1 {
-    font-family: 'Montserrat';
-    font-size: 3em;
-    font-weight: bold;
+.portfolioItem:nth-child(2n) .portfolioItemRightContainer h1, .portfolioItem:nth-child(2n) .portfolioItemRightContainer h3{
+    grid-area: left-top;
+    text-align: right;
 }
-
-.portfolioContent .portfolioItemList {
-    margin: 5% 0;
+.portfolioItem:nth-child(2n) .portfolioItemRightContainer p{
+    grid-area: left-bottom;
+    text-align: right;
 }
-
-.portfolioContent .portfolioItemList .portfolioItem:nth-child(2n) {
-    flex-direction: row-reverse;
+.portfolioItem:nth-child(2n) .portfolioItemOpinionContainer .opinionImage{
+    grid-area: right;
 }
-
-.portfolioContent .portfolioItem {
-    height: 400px;
+.portfolioItem {
+    height: auto;
     width: 100%;
     font-family: 'Montserrat';
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 5%;
+    padding: 2%;
     gap: 5%;
-    border-top: 1px solid #7B736F;
 }
 
-.portfolioContent .portfolioItem .portfolioItemImage {
-    background: coral;
-    aspect-ratio: 1;
-    height: 100%;
-    grid-area: left;
+.portfolioItem .portfolioItemImage {
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    position: relative;
+    aspect-ratio: 1;
 }
-
-.portfolioContent .portfolioItem .portfolioItemImage img {
-    max-height: 100%;
-    max-width: 100%;
+.portfolioItem .portfolioItemImage img {
+    object-fit: cover;
+    height: 100%;
 }
-
-
-.portfolioContent .portfolioItem .portfolioItemRightContainer {
+.portfolioItem .portfolioItemImage .learnMoreButton{
+    width: 185px;
+    height: 55px;
+    position: absolute;
+    /*background: #AA967E;*/
+    border: 1px solid #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    right: 6px;
+    bottom: 6px;
+    z-index: 2;
+    user-select: none;
+    backdrop-filter: blur(16px);
+}
+.portfolioItem .portfolioItemImage .learnMoreButton p{
+    font-size: 16px;
+    width: 130px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.portfolioItem .portfolioItemImage .learnMoreButtonIcon{
+    width: 20px;
+    height: 15px;
+    background: url(../images/svg/arrowRight.svg) center no-repeat;
+}
+.portfolioItem .portfolioItemRightContainer {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -591,16 +604,20 @@ main {
     gap: 16px;
 }
 
-.portfolioContent .portfolioItem .portfolioItemTitle {
-    font-size: 2em;
+.portfolioItem h1 {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    color: #743d3d;
 }
 
-.portfolioContent .portfolioItem .portfolioItemDescription {
+.portfolioItem .portfolioItemDescription {
     font-size: 1.25em;
     flex-grow: 1;
 }
 
-.portfolioContent .portfolioItem .portfolioItemOpinionContainer {
+.portfolioItem .portfolioItemOpinionContainer {
     display: grid;
     grid-template-rows: auto 1fr;
     grid-template-columns: 80px auto;
@@ -608,8 +625,7 @@ main {
     gap: 16px;
 }
 
-.portfolioContent .opinionImage {
-    background-color: coral;
+.opinionImage {
     aspect-ratio: 1;
     width: 80px;
     border-radius: 50%;
@@ -618,24 +634,27 @@ main {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    justify-self: center;
+    align-self: center;
 }
 
-.portfolioContent .opinionImage img {
+.opinionImage img {
     max-height: 100%;
     max-width: 100%;
 }
 
-.portfolioContent .opinionName {
+.opinionName {
     grid-area: right-top;
     font-size: 1.4em;
 }
 
-.portfolioContent .opinionText {
+.opinionText {
     grid-area: right-bottom;
     font-size: 1.15em;
 }
 
-.portfolioContent .portfolioItem .portfolioItemDetailsButton {
+.portfolioItem .portfolioItemDetailsButton {
+    width: 233px;
     height: 64px;
     border: 1px solid #7B736F;
 }
@@ -697,11 +716,10 @@ main .headings h2{
 main .headings h3{
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: 600;
-    font-size: 36px;
+    font-weight: 500;
+    font-size: 32px;
     line-height: 42px;
     letter-spacing: 0.005em;
-    color: #E0D7CE;
 }
 main .map iframe{
     width: 100%;
@@ -862,4 +880,46 @@ main .stages #lenta2 .item2 p{
     font-size: 22px;
     line-height: 136%;
     color: #FFFFFF;
+}
+
+main .teamContents{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+main .teamContents .teamItem{
+    width: 360px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    gap: 7px;
+}
+main .teamContents .teamItem h3{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 24px;
+    color: #484848;
+    margin-top: 10px;
+    margin-left: 0px;
+    text-align: center;
+}
+main .teamContents .teamItem h4{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+    color: #743d3d;
+    text-align: center;
+}
+main .teamContents .teamItem p{
+    width: 304px;
+    font-size: 18px;
+    margin-top: 5px;
+    text-align: center;
+    width: 100%;
 }
