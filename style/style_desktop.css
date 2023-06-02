@@ -191,6 +191,17 @@ main h2 span {
     color: #B89535;
 }
 
+main h3{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 440;
+    font-size: 24px;
+    line-height: 24px;
+    color: #484848;
+    margin-top: 30px;
+    margin-left: 28px;
+}
+
 main p {
     font-family: 'Montserrat';
     font-style: normal;
@@ -519,6 +530,7 @@ main {
     display: flex;
     justify-content: center;
     width: 100%;
+    flex-direction: column;
 }
 
 .portfolioContent {
@@ -628,12 +640,47 @@ main {
     border: 1px solid #7B736F;
 }
 
+
+main .We {
+    background: #E1E1E1;
+}
+main .We .ContentItem {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    justify-content: space-between;
+    margin-top: 57px;
+}
+main .We .ContentItem h3 {
+    font-size: 40px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    line-height: 136%;
+    letter-spacing: 0.005em;
+    font-style: normal;
+    color: #4A4A49;
+}
+main .We .ContentItem .textContent {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+}
+main .We .ContentItem .textContent .text {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 22px;
+}
+
 main .headings{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 50px;
-    margin-top: 184px;
+    margin-top: 90px;
 }
 main .headings h1{
     font-family: 'Montserrat';
@@ -749,19 +796,8 @@ main .stages .arrows{
     display: flex;
     gap: 16px;
 }
-main .stages .arrows #ring3{
-    width: 40px;
-    height: 40px;
-    background: #C4C4C4;
-    border: 1px solid #C4C4C4;
-    border-radius: 19px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /*position: absolute;*/
-    cursor: pointer;
-}
-main .stages .arrows #ring4{
+main .stages .arrows .ring {
+    background: transparent;
     width: 40px;
     height: 40px;
     background: transparent;
@@ -770,15 +806,24 @@ main .stages .arrows #ring4{
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    /*position: absolute;*/
     cursor: pointer;
 }
-#shadow3, #shadow4{
-    position: absolute;
-    z-index: -1;
+
+main .stages .arrows .ring svg path {
+    fill: #fff;
 }
+
+main .stages .arrows .ring.disabledRing {
+    background: #C4C4C4;
+}
+
+main .stages .arrows .ring.disabledRing svg path {
+    fill: #222;
+}
+
+
 main .stages #lenta2{
-    width: 3680px;
     height: auto;
     display: flex;
     justify-content: space-between;
@@ -786,6 +831,7 @@ main .stages #lenta2{
     margin-top: 65px;
     transition: all 2.8s;
     position: relative;
+    overflow: hidden;
 }
 main .stages #lenta2 .item2{
     width: 526px;
