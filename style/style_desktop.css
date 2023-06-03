@@ -710,7 +710,8 @@ main .We .ContentItem .textContent {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;   
+    align-items: center;
+    flex-direction: row;
 }
 main .We .ContentItem .textContent .text {
     width: 60%;
@@ -718,6 +719,10 @@ main .We .ContentItem .textContent .text {
     flex-direction: column;
     justify-content: space-between;
     gap: 22px;
+}
+
+main .We .ContentItem:nth-child(2n) .textContent {
+    flex-direction: row-reverse;
 }
 
 main .headings{
@@ -870,7 +875,6 @@ main .stages .arrows .ring.disabledRing svg path {
     fill: #222;
 }
 
-
 main .stages #lenta2{
     height: auto;
     display: flex;
@@ -981,6 +985,8 @@ main .headings{
 }
 main .portfolioItemList{
     padding-top: 0px;
+    display: flex;
+    flex-direction: column;
 }
 
 .galleryContainer {

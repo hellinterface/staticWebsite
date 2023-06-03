@@ -51,6 +51,8 @@
     }
     .portfolioItem .portfolioItemImage{
         aspect-ratio: 0;
+        width: 393px;
+        height: 295px;
     }
     main .contactsContent .box p{
         font-size: 20px;
@@ -106,7 +108,10 @@
         height: 360px;
     }
     main .We .ContentItem .textContent:nth-child(2n) {
-        flex-direction: column-reverse;
+        flex-direction: column;
+    }
+    main .portfolioItemList{
+        gap: 80px;
     }
 }
 @media(max-width: 800px){
