@@ -440,7 +440,6 @@ main .We mainItem .textContent .text{
 
 footer {
     width: 100vw;
-    height: 360px;
     background: #222;
     display: flex;
     justify-content: center;
@@ -449,11 +448,18 @@ footer {
 }
 
 footer .footerContent {
-    display: grid;
-    grid-template-areas: "top top" "left right";
+    display: flex;
     font-family: 'Montserrat';
     width: 100%;
     max-width: 1200px;
+    overflow: hidden;
+    flex-direction: column;
+    gap: 32px;
+}
+
+footer .footerBottom {
+    display: flex;
+    padding: 32px;
 }
 
 .footerLinks {
@@ -469,6 +475,7 @@ footer .footerContent {
     font-size: 18px;
     line-height: 21px;
     grid-area: top;
+    padding: 16px;
 }
 
 .footerLinks a {
@@ -491,6 +498,8 @@ footer .footerContent {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    flex-grow: 1;
+    gap: 16px;
 }
 
 .footerContacts .contact-with-us {
