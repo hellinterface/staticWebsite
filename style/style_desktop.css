@@ -109,6 +109,37 @@ body.menuOpened #mainMenu {
     left: 0;
 }
 
+#mainMenu #mainMenuContent li img {
+    width: 24px;
+    filter: brightness(100);
+    margin-right: 10px;
+    aspect-ratio: 1;
+}
+/* 
+#mainMenu .homeIcon {
+    width: 24px;
+    filter: brightness(100);
+    margin-right: 10px;
+}
+
+#mainMenu .servicesIcon {
+    width: 24px;
+    filter: brightness(100);
+    margin-right: 10px;
+}
+
+#mainMenu .portfolioIcon {
+    width: 30px;
+    filter: brightness(100);
+    margin-right: 10px;
+}
+
+#mainMenu .teamIcon {
+    width: 24px;
+    filter: brightness(100);
+    margin-right: 10px;
+} */
+
 header {
     width: 100vw;
     display: flex;
@@ -146,10 +177,11 @@ body.menuOpened .headerMenu {
 .headerMenu #menuToggle {
     width: 36px;
     height: 36px;
-    background-image: url(../images/svg/menu.svg);
+    background-image: url(../images/svg/menu2.svg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 24px;
+    filter: brightness(100);
 }
 
 body#mainMenuContentOpened .headerMenu #menuToggle {
@@ -562,11 +594,9 @@ main {
     overflow: hidden;
     position: relative;
     aspect-ratio: 1;
+    min-width: 250px;
 }
-.portfolioItem .portfolioItemImage img {
-    object-fit: cover;
-    height: 100%;
-}
+
 .portfolioItem .portfolioItemImage .learnMoreButton{
     width: 185px;
     height: 55px;
@@ -951,4 +981,106 @@ main .headings{
 }
 main .portfolioItemList{
     padding-top: 0px;
+}
+
+.galleryContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    transition: 0.2s ease;
+    user-select: none;
+}
+
+.galleryContainer .galleryBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0004;
+    z-index: 21;
+}
+
+.galleryContainer .galleryImageContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 500px;
+    height: 300px;
+    background-color: coral;
+    z-index: 22;
+}
+
+.galleryContainer .galleryImageContainer img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transition: 0.2s ease;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.galleryContainer .galleryButton {
+    border-radius: 50%;
+    background-color: white;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    z-index: 23;
+    background: #606060;
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: center center;
+}
+
+.galleryContainer .galleryButtonClose {
+    right: 16px;
+    top: 16px;
+    background-image: url(../images/svg/close.svg);
+}
+
+.galleryContainer .galleryButtonLeft {
+    left: 16px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-image: url(../images/svg/arrowLeft.svg);
+}
+.galleryContainer .galleryButtonRight {
+    right: 16px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-image: url(../images/svg/arrowRight.svg);
+}
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+        transform: translateX(-45px);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.reveal {
+    opacity: 0;
+}
+
+.reveal.active {
+    animation: reveal 1s ease forwards;
 }
