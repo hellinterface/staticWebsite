@@ -109,6 +109,37 @@ body.menuOpened #mainMenu {
     left: 0;
 }
 
+#mainMenu #mainMenuContent li img {
+    width: 24px;
+    filter: brightness(100);
+    margin-right: 10px;
+    aspect-ratio: 1;
+}
+/* 
+#mainMenu .homeIcon {
+    width: 24px;
+    filter: brightness(100);
+    margin-right: 10px;
+}
+
+#mainMenu .servicesIcon {
+    width: 24px;
+    filter: brightness(100);
+    margin-right: 10px;
+}
+
+#mainMenu .portfolioIcon {
+    width: 30px;
+    filter: brightness(100);
+    margin-right: 10px;
+}
+
+#mainMenu .teamIcon {
+    width: 24px;
+    filter: brightness(100);
+    margin-right: 10px;
+} */
+
 header {
     width: 100vw;
     display: flex;
@@ -148,10 +179,11 @@ body.menuOpened .headerMenu {
 .headerMenu #menuToggle {
     width: 36px;
     height: 36px;
-    background-image: url(../images/svg/menu.svg);
+    background-image: url(../images/svg/menu2.svg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 24px;
+    filter: brightness(100);
 }
 
 body#mainMenuContentOpened .headerMenu #menuToggle {
