@@ -11,14 +11,14 @@
         width: 100%;
         padding: 1vh 0px;
     }
-    .portfolioItem .portfolioItemImage .learnMoreButton{
+    /*.portfolioItem .portfolioItemImage .learnMoreButton{
         width: 45px;
         height: 45px;
         border-radius: 20%;
     }
     .portfolioItem .portfolioItemImage .learnMoreButton p{
         display: none;
-    }
+    }*/
 }
 @media(max-width: 940px){
     main .services, main .aboutStudio{
@@ -49,11 +49,19 @@
     .portfolioItem h1{
         font-size: 26px;
     }
+    .portfolioItem .portfolioItemImage{
+        aspect-ratio: 0;
+    }
     main .contactsContent .box p{
         font-size: 20px;
     }
     .portfolioItem {
         flex-direction: column;
+        padding: 0px;
+        gap: 10px;
+    }
+    .portfolioItem:nth-child(2n){
+        flex-direction: column-reverse;
     }
 }
 @media(max-width: 920px){
@@ -85,6 +93,20 @@
     main .aboutStudio{
         margin-top: -270px;
         padding-top: 160px;
+    }
+    main .We .ContentItem{
+        gap: 30px;
+    }
+    main .We .ContentItem .textContent{
+        flex-direction: column;
+        gap: 20px;
+    }
+    main .We .ContentItem .textContent img{
+        width: 360px;
+        height: 360px;
+    }
+    main .We .ContentItem .textContent:nth-child(2n) {
+        flex-direction: column-reverse;
     }
 }
 @media(max-width: 800px){
