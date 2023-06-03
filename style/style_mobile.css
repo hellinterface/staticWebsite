@@ -11,14 +11,10 @@
         width: 100%;
         padding: 1vh 0px;
     }
-    /*.portfolioItem .portfolioItemImage .learnMoreButton{
-        width: 45px;
-        height: 45px;
-        border-radius: 20%;
-    }
-    .portfolioItem .portfolioItemImage .learnMoreButton p{
+
+    #mainMenuImageContainer {
         display: none;
-    }*/
+    }
 }
 @media(max-width: 940px){
     main .services, main .aboutStudio{
