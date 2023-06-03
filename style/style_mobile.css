@@ -1,3 +1,8 @@
+@media(max-width: 1320px){
+    main .services img, main .aboutStudio img{
+        transform: scale(0.8);
+    }
+}
 @media(max-width: 1100px){
     main .blockContent{
         flex-direction: column;
@@ -5,5 +10,109 @@
     main .blockContent h3, main .blockContent span, main .blockContent p{
         width: 100%;
         padding: 1vh 0px;
+    }
+    .portfolioItem .portfolioItemImage .learnMoreButton{
+        width: 45px;
+        height: 45px;
+        border-radius: 20%;
+    }
+    .portfolioItem .portfolioItemImage .learnMoreButton p{
+        display: none;
+    }
+}
+@media(max-width: 940px){
+    main .services, main .aboutStudio{
+        flex-direction: column;
+    }
+    main .services img, main .aboutStudio img{
+        transform: scale(1);
+    }
+    main .services .textContent, main .aboutStudio .textContent{
+        width: 100%;
+        padding: 2vh;
+        gap: 18px;
+    }
+    main .contactsContent {
+        flex-direction: column;
+        gap: 32px;
+        align-items: center;
+        margin-bottom: 0px;
+    }
+    main .contactsContent .box{
+        width: 400px;
+        align-items: center;
+        gap: 10px;
+    }
+    main .contactsContent .box h1{
+        font-size: 24px;
+    }
+    .portfolioItem h1{
+        font-size: 26px;
+    }
+    main .contactsContent .box p{
+        font-size: 20px;
+    }
+}
+@media(max-width: 920px){
+    main .headings{
+        gap: 20px;
+    }
+    main .headings h1{
+        font-size: 28px;
+    }
+    main .headings h3{
+        font-size: 24px;
+    }
+    main .latestProjects .projectItems .projectItem{
+        width: 288px;
+    }
+    main .latestProjects img{
+        width: 288px;
+        height: 396.8px;
+    }
+    main .latestProjects .projectItems .projectItem h3{
+        padding: 0px 10px;
+    }
+    main .latestProjects .projectItems .projectItem p{
+        padding: 0px 10px;
+    }
+    main .services{
+        padding-bottom: 310px;
+    }
+    main .aboutStudio{
+        margin-top: -270px;
+        padding-top: 160px;
+    }
+}
+@media(max-width: 800px){
+    main > div {
+        padding: 6vh 6vw;
+    }
+    main h2{
+        font-size: 26px;
+    }
+    main p{
+        font-size: 16px;
+    }
+    main .title h1{
+        font-size: 40px;
+    }
+}
+@media(max-width: 570px){
+    main .latestProjects .textContent{
+        width: 96%;
+    }
+    main .services img, main .aboutStudio img{
+        transform: scale(0.7);
+    }
+    main .services .textContent, main .aboutStudio .textContent{
+        padding: 0px;
+    }
+    main .services{
+        padding-bottom: 160px;
+    }
+    main .aboutStudio{
+        margin-top: -180px;
+        padding-top: 75px;
     }
 }

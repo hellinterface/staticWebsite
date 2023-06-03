@@ -134,8 +134,6 @@ header {
     border-bottom: 1px solid #79716D;
 }
 
-body.pastTitleScreen header {}
-
 body.pastTitleScreen .headerMenu,
 body.darkHeader .headerMenu {
     filter: invert(1);
@@ -199,7 +197,7 @@ main h3{
     line-height: 24px;
     color: #484848;
     margin-top: 30px;
-    margin-left: 28px;
+    /*margin-left: 28px;*/
 }
 
 main p {
@@ -260,6 +258,7 @@ main .latestProjects .projectItems .projectItem{
     display: flex;
     flex-direction: column;
     margin-top: 16px;
+    gap: 14px;
 }
 main .latestProjects .projectItems .projectItem h3{
     font-family: 'Montserrat';
@@ -268,13 +267,11 @@ main .latestProjects .projectItems .projectItem h3{
     font-size: 24px;
     line-height: 24px;
     color: #484848;
-    margin-top: 30px;
-    margin-left: 28px;
+    margin: 5px 0px 0px 0px;
+    padding: 0px 28px;
 }
 main .latestProjects .projectItems .projectItem p{
-    width: 304px;
-    margin-top: 15px;
-    margin-left: 28px;
+    padding: 0px 28px;
     font-size: 16px;
 }
 main .latestProjects .learnMoreButtonContainer{
@@ -574,8 +571,7 @@ main {
     width: 185px;
     height: 55px;
     position: absolute;
-    /*background: #AA967E;*/
-    border: 1px solid #FFFFFF;
+    border: 1px solid #584e43;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -721,9 +717,13 @@ main .headings h3{
     line-height: 42px;
     letter-spacing: 0.005em;
 }
+main .map{
+    height: 66vh;
+    padding: 0vh 10vw;
+}
 main .map iframe{
     width: 100%;
-    height: 600px;
+    height: 100%;
 }
 main .contactsContent{
     display: flex;
@@ -922,4 +922,33 @@ main .teamContents .teamItem p{
     margin-top: 5px;
     text-align: center;
     width: 100%;
+}
+
+
+main .latestProjects .projectItems .projectItem{
+    gap: 14px;
+}
+main .latestProjects .projectItems .projectItem h3{
+    margin: 5px 0px 0px 0px;
+    padding: 0px 28px;
+}
+main .latestProjects .projectItems .projectItem p{
+    padding: 0px 28px;
+    font-size: 16px;
+}
+main .latestProjects .textContent{
+    width: 80%;
+}
+main .latestProjects .textContent{
+    height: auto;
+    gap: 24px;
+}
+main .aboutStudio{
+    height: auto;
+}
+main .headings{
+    margin-top: 140px;
+}
+main .portfolioItemList{
+    padding-top: 0px;
 }
