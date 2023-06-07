@@ -63,6 +63,12 @@
     }
 }
 @media(max-width: 920px){
+    #mainMenu #mainMenuContent nav a{
+        font-size: 22px;
+    }
+    #mainMenu #mainMenuContent nav li{
+        margin-bottom: 20px;
+    }
     main .headings{
         gap: 20px;
     }
