@@ -41,31 +41,31 @@
     </header>
     <main>
         <div class="title">
-            <h1>Оставьте все кошмары позади</h1>
+            <h1 class="revealBottom">Оставьте все кошмары позади</h1>
         </div>
         <div class="latestProjects">
-            <div class="textContent">
+            <div class="textContent reveal">
                 <h2>Основные направления</h2>
                 <p>Наша компания уже давно занимается дизайном жилых и офисных помещений, а так же дизайном загородных домов.Мы подбираем качественные материалы и лично контролируем весь професс, чтобы наши клиенты были спокойны.</p>
             </div>
             <div class="projectItems">
-                <div class="projectItem">
+                <div class="projectItem revealRight">
                     <img src="images/index/latest_projects_1.png" alt="">
                     <h3>Дизайн офисных помещений</h3>
                     <p>Дизайн интерьеров офисных помещений, таких как кабинеты, комнаты переговоров, коридорных помещений и т.д.</p>
                 </div>
-                <div class="projectItem">
+                <div class="projectItem revealRight" style="animation-delay: 0.25s">
                     <img src="images/index/latest_projects_2.png" alt="">
                     <h3>Дизайн жилых помещений</h3>
                     <p>Проектирование квартир от 80 до 300 м2, домов от 250 до 1500 м2 в уютном для вас стиле, из проверенных и качественных материалов.</p>
                 </div>
-                <div class="projectItem">
+                <div class="projectItem revealRight" style="animation-delay: 0.5s">
                     <img src="images/index/latest_projects_3.png" alt="">
                     <h3>Архитектурное проектирование загородных домов</h3>
                     <p>Архитектурное проектирование загородных домов от 250 до 1500 м2 для частных клиентов в уютном для вас стиле. </p>
                 </div>
             </div>
-            <a href="portfolio.html" class="learnMoreButtonContainer">
+            <a href="portfolio.html" class="learnMoreButtonContainer revealRight">
                 <div class="learnMoreButton">
                 <div class="learnMoreButtonIcon"></div>
                 <p>Узнать больше</p>
@@ -73,7 +73,7 @@
             </a>
         </div>
         <div class="services">
-            <div class="textContent">
+            <div class="textContent reveal">
                 <h2>Стоимость работ</h2>
                 <p>Стоимость работ непосредственно зависит от размеров здания, количества работы и сроков выполнения заказа.  Для ознакомления у нас есть три категории, о которых вы можете прочесть подробнее…</p>
                 <a href="services.html" class="learnMoreButton">
@@ -81,11 +81,11 @@
                     <p>Пакеты услуг и стоимость</p>
                 </a>
             </div>
-            <img src="images/index/services.png" alt="">
+            <img src="images/index/services.png" alt="" class="revealRight">
         </div>
         <div class="aboutStudio">
-            <img src="images/index/studio.png" alt="">
-            <div class="textContent">
+            <img src="images/index/studio.png" alt="" class="reveal">
+            <div class="textContent revealRight">
                 <h2>О студии</h2>
                 <p>Студия дизайна Nightmare имеет долгую историю и большое количество опыта, поэтому, когда клиент выбирает нас, он выбирает гарантированное качество результата.</p>
                 <a href="about.html" class="learnMoreButton">
@@ -95,20 +95,16 @@
             </div>
         </div>
         <div class="stages">
-            <h2>Этапы работы</h2>
-            <div class="arrows">
-                <div id="ring3" class="ring">
-                    <svg width="10" height="13" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9.51065 10.6281C9.82398 10.8694 10 11.1967 10 11.5379C10 11.8791 9.82398 12.2064 9.51065 12.4477C9.19733 12.689 8.77237 12.8246 8.32927 12.8246C7.88616 12.8246 7.46121 12.689 7.14788 12.4477L0.492186 7.32208C0.336229 7.20295 0.212443 7.06123 0.127968 6.90508C0.0434924 6.74893 0 6.58144 0 6.41228C0 6.24312 0.0434924 6.07563 0.127968 5.91948C0.212443 5.76333 0.336229 5.6216 0.492186 5.50248L7.14788 0.376851C7.30302 0.257375 7.4872 0.162601 7.68991 0.0979408C7.89261 0.0332806 8.10987 0 8.32927 0C8.54867 0 8.76593 0.0332806 8.96863 0.0979408C9.17133 0.162601 9.35551 0.257375 9.51065 0.376851C9.6658 0.496328 9.78886 0.638167 9.87282 0.794271C9.95679 0.950374 10 1.11768 10 1.28665C10 1.45562 9.95679 1.62293 9.87282 1.77903C9.78886 1.93513 9.6658 2.07697 9.51065 2.19645L4.0197 6.41228L9.51065 10.6281Z" fill="white"/>
-                    </svg>
+            <h2 class="reveal">Этапы работы</h2>
+            <div class="arrows revealRight">
+                <div id="ringLeft" class="ring">
+                    <img src="images/svg/arrowLeft.svg" alt="">
                 </div>
-                <div id="ring4" class="ring">
-                    <svg width="10" height="13" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9.50781 7.32208L2.85212 12.4477C2.53879 12.689 2.11384 12.8246 1.67073 12.8246C1.22763 12.8246 0.802669 12.689 0.489345 12.4477C0.176022 12.2064 0 11.8791 0 11.5379C0 11.1967 0.176022 10.8694 0.489345 10.6281L5.9803 6.41228L0.489345 2.19645C0.176022 1.95516 0 1.62789 0 1.28665C0 1.11768 0.0432137 0.950374 0.127176 0.79427C0.211138 0.638167 0.334204 0.496328 0.489345 0.376851C0.644487 0.257375 0.828667 0.162601 1.03137 0.0979408C1.23407 0.0332806 1.45133 0 1.67073 0C2.11384 0 2.53879 0.135557 2.85212 0.376851L9.50781 5.50248C9.66377 5.6216 9.78756 5.76333 9.87203 5.91948C9.95651 6.07563 10 6.24312 10 6.41228C10 6.58144 9.95651 6.74893 9.87203 6.90508C9.78756 7.06123 9.66377 7.20295 9.50781 7.32208Z" fill="#C4C4C4"/>
-                    </svg>
+                <div id="ringRight" class="ring">
+                    <img src="images/svg/arrowRight.svg" alt="">
                 </div>
             </div>
-            <div id="lenta2">
+            <div id="lenta2" class="revealRight">
                 <div class="item2" id="item1">
                     <div class="cover">
                         <img src="images/index/work.png" alt="">

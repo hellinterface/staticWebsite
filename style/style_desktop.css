@@ -208,7 +208,7 @@ body.menuOpened .headerMenu {
     filter: brightness(100);
 }
 
-body#mainMenuContentOpened .headerMenu #menuToggle {
+body.menuOpened .headerMenu #menuToggle {
     background-image: url(../images/svg/close.svg);
     background-size: 20px;
 }
@@ -331,6 +331,16 @@ main .latestProjects .projectItems .projectItem p{
     padding: 0px 28px;
     font-size: 16px;
 }
+
+.learnMoreButton {
+    transition: 0.2s ease;
+}
+
+.learnMoreButton:hover {
+    background: #0001;
+    box-shadow: 0 2px 8px #0004;
+}
+
 main .latestProjects .learnMoreButtonContainer{
     height: 60px;
     display: flex;
@@ -518,7 +528,6 @@ footer .footerBottom {
 }
 
 .footerContacts {
-    border-bottom: 1px solid #333;
     grid-area: left;
     display: flex;
     flex-direction: column;
@@ -560,7 +569,6 @@ footer .footerBottom {
 }
 
 .footerSocial {
-    border-bottom: 1px solid #333;
     grid-area: right;
     display: flex;
     justify-content: center;
@@ -621,6 +629,10 @@ main {
     gap: 5%;
 }
 
+.portfolioItem:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+
 .portfolioItem .portfolioItemImage {
     display: flex;
     justify-content: center;
@@ -629,6 +641,7 @@ main {
     position: relative;
     aspect-ratio: 1;
     min-width: 250px;
+    transition: 0.2s ease;
 }
 
 .portfolioItem .portfolioItemImage .learnMoreButton{
@@ -641,9 +654,14 @@ main {
     justify-content: space-evenly;
     right: 6px;
     bottom: 6px;
-    z-index: 2;
+    z-index: 5;
     user-select: none;
     backdrop-filter: blur(16px);
+    transition: 0.2s ease;
+}
+.portfolioItem .portfolioItemImage .learnMoreButton:hover {
+    box-shadow: 0 4px 12px #0004;
+    background-color: #fff2;
 }
 .portfolioItem .portfolioItemImage .learnMoreButton p{
     font-size: 16px;
@@ -656,6 +674,11 @@ main {
     height: 15px;
     background: url(../images/svg/arrowRight.svg) center no-repeat;
 }
+
+.portfolioItem .portfolioItemImage:hover {
+    box-shadow: 0 4px 12px #0004;
+}
+
 .portfolioItem .portfolioItemRightContainer {
     display: flex;
     flex-direction: column;
@@ -888,12 +911,11 @@ main .stages .arrows .ring {
     width: 40px;
     height: 40px;
     background: transparent;
-    border: 1px solid #C4C4C4;
+    border: 1px solid #7d7d7d;
     border-radius: 19px;
     display: flex;
     justify-content: center;
     align-items: center;
-    /*position: absolute;*/
     cursor: pointer;
 }
 
@@ -902,11 +924,11 @@ main .stages .arrows .ring svg path {
 }
 
 main .stages .arrows .ring.disabledRing {
-    background: #C4C4C4;
+    background: #7d7d7d;
 }
 
-main .stages .arrows .ring.disabledRing svg path {
-    fill: #222;
+main .stages .arrows .ring.disabledRing img {
+    filter: brightness(0.2);
 }
 
 main .stages #lenta2{
@@ -1107,7 +1129,7 @@ main .portfolioItemList{
     background-image: url(../images/svg/arrowRight.svg);
 }
 
-@keyframes reveal {
+@keyframes revealLeft {
     0% {
         opacity: 0;
         transform: translateX(-45px);
@@ -1116,11 +1138,38 @@ main .portfolioItemList{
         opacity: 1;
     }
 }
+@keyframes revealRight {
+    0% {
+        opacity: 0;
+        transform: translateX(45px);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes revealBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(45px);
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
-.reveal {
+
+.reveal, .revealRight, .revealBottom {
     opacity: 0;
 }
 
 .reveal.active {
-    animation: reveal 1s ease forwards;
+    animation: revealLeft 1s ease forwards;
+}
+
+.revealRight.active {
+    animation: revealRight 1s ease forwards;
+}
+
+.revealBottom.active {
+    animation: revealBottom 1s ease forwards;
 }

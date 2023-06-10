@@ -151,4 +151,14 @@
         margin-top: -180px;
         padding-top: 75px;
     }
+    main .stages #lenta2 .item2 .cover h3 {
+        font-size: 20px;
+        padding: 16px;
+        flex-grow: 1;
+    }
+    main .stages #lenta2 .item2 .cover {
+        flex-direction: column;
+        height: 400px;
+        width: 260px;
+    }
 }
